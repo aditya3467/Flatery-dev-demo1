@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Step Process</title>
+    <style>
+        /* Import a modern font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+        /* Basic Reset and Body Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #4a5568;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Main container for the component */
+        .process-container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Main heading styles */
+        .process-container h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+        
+        /* Subtitle styles */
+        .process-container .subtitle {
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 60px;
+        }
+
+        /* Wrapper for the timeline/steps */
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            text-align: left;
+        }
+
+        /* The vertical connecting line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 10px; /* Start after the top of the first circle */
+            bottom: 10px; /* End before the bottom of the last circle */
+            left: 34px; /* (Circle Width / 2) - (Line Width / 2) => (70/2) - (2/2) */
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        /* Individual step item */
+        .timeline-item {
+            position: relative;
+            display: flex;
+            align-items: flex-start; /* Aligns circle to the top of the content */
+            margin-bottom: 50px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* The numbered circle */
+        .timeline-dot {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            flex-shrink: 0; /* Prevents the circle from shrinking */
+            z-index: 1; /* Sits on top of the line */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Color variants for the circles */
+        .dot-blue {
+            background-color: #eef4ff;
+            color: #4285f4;
+        }
+
+        .dot-green {
+            background-color: #e4f8ee;
+            color: #34d399;
+        }
+
+        /* Text content for each step */
+        .timeline-content {
+            padding-left: 30px;
+        }
+
+        .timeline-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 0 0 8px 0;
+            /* Adjust top margin to vertically center with the circle */
+            margin-top: 5px; 
+        }
+
+        .timeline-content p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* --- Responsive Design for Mobile --- */
+        @media (max-width: 768px) {
+            .process-container h2 {
+                font-size: 28px;
+            }
+
+            .process-container .subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+            
+            .timeline::before {
+                left: 29px; /* Adjust for smaller circle */
+            }
+
+            .timeline-item {
+                margin-bottom: 30px;
+            }
+
+            .timeline-dot {
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            }
+
+            .timeline-content {
+                padding-left: 20px;
+            }
+
+            .timeline-content h3 {
+                font-size: 18px;
+                margin-top: 3px;
+            }
+
+            .timeline-content p {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="process-container">
+        <h2>A simple, 3-step process</h2>
+        <p class="subtitle">We've simplified property management for you.</p>
+
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-dot dot-blue">1</div>
+                <div class="timeline-content">
+                    <h3>Tenant Raises Request</h3>
+                    <p>Tenants can easily submit maintenance or service requests through the intuitive Flatery app or web portal.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <div class="timeline-dot dot-green">2</div>
+                <div class="timeline-content">
+                    <h3>Owner Approves</h3>
+                    <p>You receive an instant notification, review the details, and approve the request with a single tap.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <div class="timeline-dot dot-blue">3</div>
+                <div class="timeline-content">
+                    <h3>Service Provider Resolves</h3>
+                    <p>The assigned service provider is notified, resolves the issue, and marks the request as complete. Everyone stays in the loop.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
