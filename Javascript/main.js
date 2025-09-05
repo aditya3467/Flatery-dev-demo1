@@ -36,10 +36,10 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-  // Fix: Only close hamburger menu on outside click after menu is open, and ignore the click that opens it
-  // Use mousedown to set a flag if the click is on the burger icon or menu
 
-  document.addEventListener('click', function(e) {
+// Closing hamburger if clicked outside
+
+document.addEventListener('click', function(e) {
     const burgerToggle = document.getElementById('burger-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const burgerContainer = document.querySelector('.burger-container');
@@ -50,7 +50,3 @@ window.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-
-
-
-
