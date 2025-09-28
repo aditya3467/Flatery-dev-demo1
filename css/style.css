@@ -1561,6 +1561,7 @@ select:hover{
 }
 
 
+
   
 
 
@@ -1902,3 +1903,141 @@ select:hover{
 }
 
 
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+/* Tenant Dashboard */
+/* Tenant Service Requests Section */
+.tenant-service-requests-section {
+  background: #f7f9fb;
+  padding: 2rem 0 2.5rem 0;
+}
+.tenant-service-requests-container {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  padding: 0 48px;
+}
+.tenant-service-requests-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+.tenant-service-requests-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 0.5rem 0.5rem 1.2rem 0.5rem;
+  margin-bottom: 1.2rem;
+  overflow-x: auto;
+}
+.tenant-service-requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.tenant-service-requests-table th {
+  background: #f7f9fb;
+  color: #222;
+  font-weight: 700;
+  padding: 1rem 0.7rem;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+.tenant-service-requests-table td {
+  padding: 1rem 0.7rem;
+  color: #222;
+  font-weight: 500;
+  border-bottom: 1.5px solid #f0f0f0;
+  vertical-align: middle;
+}
+.tenant-service-requests-table tr:last-child td {
+  border-bottom: none;
+}
+.status-badge {
+  display: inline-block;
+  padding: 0.35em 1em;
+  border-radius: 12px;
+  font-size: 0.98em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.status-badge.pending {
+  background: #fff7d1;
+  color: #bfa100;
+}
+.status-badge.completed {
+  background: #d7fbe8;
+  color: #1ca97c;
+}
+.view-link {
+  color: #0d61a6;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.view-link:hover {
+  color: #3893d8;
+  text-decoration: underline;
+}
+.tenant-request-service-btn {
+  background: #3893d8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.tenant-request-service-btn:hover {
+  background: #0d61a6;
+  transform: scale(1.04);
+}
+.tenant-request-service-btn i {
+  font-size: 1.1em;
+}
+
+@media (max-width: 900px) {
+  .tenant-service-requests-container {
+    padding: 0 8px;
+  }
+  .tenant-service-requests-title {
+    font-size: 1.2rem;
+  }
+  .tenant-service-requests-table th,
+  .tenant-service-requests-table td {
+    padding: 0.7rem 0.4rem;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 600px) {
+  .tenant-service-requests-section {
+    padding: 1.2rem 0 1.5rem 0;
+  }
+  .tenant-service-requests-title {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .tenant-service-requests-table-wrapper {
+    padding: 0.2rem 0.2rem 0.7rem 0.2rem;
+  }
+  .tenant-service-requests-table th,
+  .tenant-service-requests-table td {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.92rem;
+  }
+  .tenant-request-service-btn {
+    font-size: 0.98rem;
+    padding: 0.5rem 1rem;
+  }
+}
